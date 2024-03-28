@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
     <sys_script_fix action="INSERT_OR_UPDATE">
-        <active>true</active>
         <before>false</before>
         <description>Create the initial formatter properties for the loaner request and loaner task forms
 Update sys_app_module to allow create/update access for automated module maintenance</description>
-        <flush_cache>false</flush_cache>
         <name>Loaner Request Post Install</name>
-        <run_once>true</run_once>
+        <record_for_rollback>false</record_for_rollback>
         <script><![CDATA[var propList = [
 	{
 	 'suffix' : null,
@@ -57,13 +55,11 @@ rl.insert();
         <sys_class_name>sys_script_fix</sys_class_name>
         <sys_created_by>admin_SHARE</sys_created_by>
         <sys_created_on>2016-03-30 23:11:43</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>48fa762067221200f5c55bb557415a07</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_name>Loaner Request Post Install</sys_name>
         <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
         <sys_update_name>sys_script_fix_48fa762067221200f5c55bb557415a07</sys_update_name>
         <sys_updated_by>admin_SHARE</sys_updated_by>

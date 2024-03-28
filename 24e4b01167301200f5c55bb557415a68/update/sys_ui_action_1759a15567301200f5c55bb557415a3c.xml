@@ -3,13 +3,19 @@
         <action_name>loaner_withdraw</action_name>
         <active>true</active>
         <client>true</client>
+        <client_script_v2/>
         <comments>Allow the requester or the loaner_admin to withdraw a loaner request</comments>
         <condition>(current.requested_for == gs.getUserID() || gs.hasRole('x_loaner.user')) &amp;&amp; !(current.state == 3 || current.state == 4 || current.state == 7)</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
         <form_context_menu>false</form_context_menu>
         <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
         <hint/>
+        <isolate_script>false</isolate_script>
         <list_action>false</list_action>
         <list_banner_button>false</list_banner_button>
         <list_button>false</list_button>
@@ -17,6 +23,8 @@
         <list_context_menu>false</list_context_menu>
         <list_link>false</list_link>
         <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
         <name>Withdraw Request</name>
         <onclick>withdraw()</onclick>
         <order>100</order>
@@ -43,7 +51,6 @@ if(typeof window == 'undefined') {
         <sys_class_name>sys_ui_action</sys_class_name>
         <sys_created_by>admin_SHARE</sys_created_by>
         <sys_created_on>2016-01-06 01:22:06</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1759a15567301200f5c55bb557415a3c</sys_id>
@@ -52,7 +59,6 @@ if(typeof window == 'undefined') {
         <sys_overrides/>
         <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
         <sys_update_name>sys_ui_action_1759a15567301200f5c55bb557415a3c</sys_update_name>
         <sys_updated_by>admin_SHARE</sys_updated_by>

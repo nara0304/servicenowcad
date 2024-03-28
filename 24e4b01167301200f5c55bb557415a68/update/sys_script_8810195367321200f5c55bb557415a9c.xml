@@ -39,7 +39,6 @@
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin_SHARE</sys_created_by>
         <sys_created_on>2016-04-20 14:45:02</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>8810195367321200f5c55bb557415a9c</sys_id>
@@ -48,7 +47,6 @@
         <sys_overrides/>
         <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
         <sys_update_name>sys_script_8810195367321200f5c55bb557415a9c</sys_update_name>
         <sys_updated_by>admin_SHARE</sys_updated_by>

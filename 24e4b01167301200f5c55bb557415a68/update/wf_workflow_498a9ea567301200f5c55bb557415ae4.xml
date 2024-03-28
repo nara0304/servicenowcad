@@ -6,8 +6,8 @@
         <checked_out/>
         <checked_out_by/>
         <column_renderer display_value="Workflow-driven">a56213111b030100adca1e094f0713ac</column_renderer>
-        <condition table="x_loaner_request">state=14^item_type=cmdb_ci_computer^EQ<item endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="14"/>
-            <item endquery="false" field="item_type" goto="false" newquery="false" operator="=" or="false" value="cmdb_ci_computer"/>
+        <condition table="x_loaner_request">state=14^item_type=cmdb_ci_computer^EQ<item display_value="Reserved" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="14"/>
+            <item display_value="Laptop" endquery="false" field="item_type" goto="false" newquery="false" operator="=" or="false" value="cmdb_ci_computer"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </condition>
         <condition_type>run_match</condition_type>
@@ -50,7 +50,6 @@
         <sys_class_name>wf_workflow</sys_class_name>
         <sys_created_by>admin_SHARE</sys_created_by>
         <sys_created_on>2016-01-06 23:33:27</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>498a9ea567301200f5c55bb557415ae4</sys_id>
@@ -59,7 +58,6 @@
         <sys_overrides/>
         <sys_package display_value="Loaner Request" source="x_loaner">24e4b01167301200f5c55bb557415a68</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Loaner Request">24e4b01167301200f5c55bb557415a68</sys_scope>
         <sys_update_name>wf_workflow_498a9ea567301200f5c55bb557415ae4</sys_update_name>
         <sys_updated_by>admin_SHARE</sys_updated_by>
@@ -96,6 +94,7 @@
         <x>20</x>
         <y>20</y>
     </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=c9ff095367321200f5c55bb557415a00"/>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="Begin">c9ff095367321200f5c55bb557415a00</activity>
         <condition>true</condition>
@@ -145,6 +144,7 @@
         <x>722</x>
         <y>127</y>
     </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=8dff095367321200f5c55bb557415a00"/>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Create Task">9f4d1be5c0a8016400043d34ce066316</activity_definition>
         <activity_definition_updated>false</activity_definition_updated>
@@ -173,75 +173,20 @@
         <x>330</x>
         <y>129</y>
     </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=05ff095367321200f5c55bb557415a05"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
         <document_key>05ff095367321200f5c55bb557415a05</document_key>
-        <order>10</order>
+        <order>700</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin_SHARE</sys_created_by>
         <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>c1ff095367321200f5c55bb557415a07</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value>x_loaner_task</value>
-        <variable display_value="">c35ddb660a0a0ba96248a7095d22925c</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>05ff095367321200f5c55bb557415a05</document_key>
-        <order>20</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>cdff095367321200f5c55bb557415a06</sys_id>
+        <sys_id>41ff095367321200f5c55bb557415a06</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin_SHARE</sys_updated_by>
         <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
         <value/>
-        <variable display_value="">c35e49040a0a0ba96248a709c2b3780b</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>05ff095367321200f5c55bb557415a05</document_key>
-        <order>40</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>c1ff095367321200f5c55bb557415a06</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value>1</value>
-        <variable display_value="">c35e5fc70a0a0ba96248a7091af61d11</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>05ff095367321200f5c55bb557415a05</document_key>
-        <order>200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>cdff095367321200f5c55bb557415a07</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value/>
-        <variable display_value="">8ec1dbcec0a800662abc511f1daedc1d</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>05ff095367321200f5c55bb557415a05</document_key>
-        <order>250</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>c5ff095367321200f5c55bb557415a06</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value/>
-        <variable display_value="">c35e03850a0a0ba96248a709503bd0c4</variable>
+        <variable display_value="Time zone based on">8ed08869c0a800662aafc17e09975bb3</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -255,91 +200,7 @@
         <sys_updated_by>admin_SHARE</sys_updated_by>
         <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
         <value/>
-        <variable display_value="">8ec61405c0a800661755b30be4ff8fcd</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>05ff095367321200f5c55bb557415a05</document_key>
-        <order>400</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>c9ff095367321200f5c55bb557415a06</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
-        <variable display_value="">8ec7a5dbc0a80066187fa7acf3778705</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>05ff095367321200f5c55bb557415a05</document_key>
-        <order>600</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>45ff095367321200f5c55bb557415a05</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value/>
-        <variable display_value="">8ecbeba5c0a8006672d676cd11dfa881</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>05ff095367321200f5c55bb557415a05</document_key>
-        <order>610</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>4dff095367321200f5c55bb557415a07</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value/>
-        <variable display_value="">8ecf789cc0a8006652fc30aae937c5aa</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>05ff095367321200f5c55bb557415a05</document_key>
-        <order>620</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>45ff095367321200f5c55bb557415a07</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
-        <variable display_value="">8eda2a35c0a800660f7aef7be752bf0b</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>05ff095367321200f5c55bb557415a05</document_key>
-        <order>700</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>41ff095367321200f5c55bb557415a06</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value/>
-        <variable display_value="">8ed08869c0a800662aafc17e09975bb3</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>05ff095367321200f5c55bb557415a05</document_key>
-        <order>710</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>c9ff095367321200f5c55bb557415a05</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value/>
-        <variable display_value="">8ed4dbbec0a800664dbecf404d2c7ccd</variable>
+        <variable display_value="Due date field">8ec61405c0a800661755b30be4ff8fcd</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -353,21 +214,50 @@
         <sys_updated_by>admin_SHARE</sys_updated_by>
         <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
         <value/>
-        <variable display_value="">8ed32275c0a800665d67078e699a171f</variable>
+        <variable display_value="Timezone field">8ed32275c0a800665d67078e699a171f</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
         <document_key>05ff095367321200f5c55bb557415a05</document_key>
-        <order>1000</order>
+        <order>600</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin_SHARE</sys_created_by>
         <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>c5ff095367321200f5c55bb557415a07</sys_id>
+        <sys_id>45ff095367321200f5c55bb557415a05</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin_SHARE</sys_updated_by>
         <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value>Fields</value>
-        <variable display_value="">c35dfee20a0a0ba96248a709f3a40869</variable>
+        <value/>
+        <variable display_value="Schedule based on">8ecbeba5c0a8006672d676cd11dfa881</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>2000</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>45ff095367321200f5c55bb557415a06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>// Set 'answer' to the number of seconds this timer should wait&#13;
+answer = 0;</value>
+        <variable display_value="Due date script">8eca692cc0a80066783fefee57143a1a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>620</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>45ff095367321200f5c55bb557415a07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
+        <variable display_value="Schedule">8eda2a35c0a800660f7aef7be752bf0b</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -381,65 +271,7 @@
         <sys_updated_by>admin_SHARE</sys_updated_by>
         <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
         <value/>
-        <variable display_value="">c35e07ae0a0a0ba96248a7097c81317c</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>05ff095367321200f5c55bb557415a05</document_key>
-        <order>1200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>4dff095367321200f5c55bb557415a06</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value/>
-        <variable display_value="">c35e0c980a0a0ba96248a70916cbc62e</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>05ff095367321200f5c55bb557415a05</document_key>
-        <order>1300</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>cdff095367321200f5c55bb557415a05</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value>Post deployment work</value>
-        <variable display_value="">c35e10720a0a0ba96248a709d48d0894</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>05ff095367321200f5c55bb557415a05</document_key>
-        <order>1400</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>c9ff095367321200f5c55bb557415a07</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value>Ensure machine is in good working order&#13;
-Ensure all parts are returned&#13;
-Re-image the machine.</value>
-        <variable display_value="">c35e176c0a0a0ba96248a7090e235011</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>05ff095367321200f5c55bb557415a05</document_key>
-        <order>1500</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>4dff095367321200f5c55bb557415a05</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value/>
-        <variable display_value="">c35e45aa0a0a0ba96248a709f3af7bac</variable>
+        <variable display_value="Fulfillment group">c35e07ae0a0a0ba96248a7097c81317c</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -453,21 +285,7 @@ Re-image the machine.</value>
         <sys_updated_by>admin_SHARE</sys_updated_by>
         <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
         <value/>
-        <variable display_value="">c35dd7a80a0a0ba96248a709f45ae01b</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>05ff095367321200f5c55bb557415a05</document_key>
-        <order>1700</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>c5ff095367321200f5c55bb557415a05</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:55</sys_updated_on>
-        <value>0</value>
-        <variable display_value="">989c45c8c0a8006676efffafaa6d7442</variable>
+        <variable display_value="Set values">c35dd7a80a0a0ba96248a709f45ae01b</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -486,7 +304,520 @@ Re-image the machine.</value>
 // For example:&#13;
 //     task.short_description = current.short_description;&#13;
 </value>
-        <variable display_value="">989cdb20c0a800661789b3de0f40214a</variable>
+        <variable display_value="Advanced Script">989cdb20c0a800661789b3de0f40214a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>1500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>4dff095367321200f5c55bb557415a05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Task template">c35e45aa0a0a0ba96248a709f3af7bac</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>4dff095367321200f5c55bb557415a06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Assigned to">c35e0c980a0a0ba96248a70916cbc62e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>610</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>4dff095367321200f5c55bb557415a07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Schedule field">8ecf789cc0a8006652fc30aae937c5aa</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>40</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>c1ff095367321200f5c55bb557415a06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Wait for completion">c35e5fc70a0a0ba96248a7091af61d11</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>c1ff095367321200f5c55bb557415a07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>x_loaner_task</value>
+        <variable display_value="Task type">c35ddb660a0a0ba96248a7095d22925c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>1700</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>c5ff095367321200f5c55bb557415a05</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:55</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Advanced">989c45c8c0a8006676efffafaa6d7442</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>250</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>c5ff095367321200f5c55bb557415a06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Duration">c35e03850a0a0ba96248a709503bd0c4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>1000</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>c5ff095367321200f5c55bb557415a07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>Fields</value>
+        <variable display_value="Task values from">c35dfee20a0a0ba96248a709f3a40869</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>710</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>c9ff095367321200f5c55bb557415a05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone">8ed4dbbec0a800664dbecf404d2c7ccd</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>c9ff095367321200f5c55bb557415a06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
+        <variable display_value="Relative duration">8ec7a5dbc0a80066187fa7acf3778705</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>1400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>c9ff095367321200f5c55bb557415a07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>Ensure machine is in good working order&#13;
+Ensure all parts are returned&#13;
+Re-image the machine.</value>
+        <variable display_value="Instructions">c35e176c0a0a0ba96248a7090e235011</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>1300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>cdff095367321200f5c55bb557415a05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>Post deployment work</value>
+        <variable display_value="Short description">c35e10720a0a0ba96248a709d48d0894</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>20</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>cdff095367321200f5c55bb557415a06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Priority">c35e49040a0a0ba96248a709c2b3780b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>cdff095367321200f5c55bb557415a07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Due date based on">8ec1dbcec0a800662abc511f1daedc1d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>c1ff095367321200f5c55bb557415a07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>x_loaner_task</value>
+        <variable display_value="Task type">c35ddb660a0a0ba96248a7095d22925c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>20</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>cdff095367321200f5c55bb557415a06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Priority">c35e49040a0a0ba96248a709c2b3780b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>40</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>c1ff095367321200f5c55bb557415a06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Wait for completion">c35e5fc70a0a0ba96248a7091af61d11</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>cdff095367321200f5c55bb557415a07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Due date based on">8ec1dbcec0a800662abc511f1daedc1d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>250</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>c5ff095367321200f5c55bb557415a06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Duration">c35e03850a0a0ba96248a709503bd0c4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>41ff095367321200f5c55bb557415a07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Due date field">8ec61405c0a800661755b30be4ff8fcd</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>c9ff095367321200f5c55bb557415a06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
+        <variable display_value="Relative duration">8ec7a5dbc0a80066187fa7acf3778705</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>45ff095367321200f5c55bb557415a05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Schedule based on">8ecbeba5c0a8006672d676cd11dfa881</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>610</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>4dff095367321200f5c55bb557415a07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Schedule field">8ecf789cc0a8006652fc30aae937c5aa</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>620</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>45ff095367321200f5c55bb557415a07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
+        <variable display_value="Schedule">8eda2a35c0a800660f7aef7be752bf0b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>700</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>41ff095367321200f5c55bb557415a06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone based on">8ed08869c0a800662aafc17e09975bb3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>710</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>c9ff095367321200f5c55bb557415a05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone">8ed4dbbec0a800664dbecf404d2c7ccd</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>720</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>41ff095367321200f5c55bb557415a08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Timezone field">8ed32275c0a800665d67078e699a171f</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>1000</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>c5ff095367321200f5c55bb557415a07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>Fields</value>
+        <variable display_value="Task values from">c35dfee20a0a0ba96248a709f3a40869</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>1100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>49ff095367321200f5c55bb557415a05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Fulfillment group">c35e07ae0a0a0ba96248a7097c81317c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>4dff095367321200f5c55bb557415a06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Assigned to">c35e0c980a0a0ba96248a70916cbc62e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>1300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>cdff095367321200f5c55bb557415a05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>Post deployment work</value>
+        <variable display_value="Short description">c35e10720a0a0ba96248a709d48d0894</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>1400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>c9ff095367321200f5c55bb557415a07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>Ensure machine is in good working order&#13;
+Ensure all parts are returned&#13;
+Re-image the machine.</value>
+        <variable display_value="Instructions">c35e176c0a0a0ba96248a7090e235011</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>1500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>4dff095367321200f5c55bb557415a05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Task template">c35e45aa0a0a0ba96248a709f3af7bac</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>1600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>49ff095367321200f5c55bb557415a06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Set values">c35dd7a80a0a0ba96248a709f45ae01b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>1700</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>c5ff095367321200f5c55bb557415a05</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:55</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Advanced">989c45c8c0a8006676efffafaa6d7442</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>05ff095367321200f5c55bb557415a05</document_key>
+        <order>1710</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>49ff095367321200f5c55bb557415a07</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:55</sys_updated_on>
+        <value>// Set values for the task in this script.  Use the variable 'task' when setting additional values.&#13;
+// Note: This script is run after the task values are set using the Fields, Template or Values you have specified.&#13;
+//&#13;
+// For example:&#13;
+//     task.short_description = current.short_description;&#13;
+</value>
+        <variable display_value="Advanced Script">989cdb20c0a800661789b3de0f40214a</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -501,7 +832,7 @@ Re-image the machine.</value>
         <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
         <value>// Set 'answer' to the number of seconds this timer should wait&#13;
 answer = 0;</value>
-        <variable display_value="">8eca692cc0a80066783fefee57143a1a</variable>
+        <variable display_value="Due date script">8eca692cc0a80066783fefee57143a1a</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="Post Deployment">05ff095367321200f5c55bb557415a05</activity>
@@ -552,215 +883,20 @@ answer = 0;</value>
         <x>336</x>
         <y>17</y>
     </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=c5ff095367321200f5c55bb557415a01"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
         <document_key>c5ff095367321200f5c55bb557415a01</document_key>
-        <order>10</order>
+        <order>1500</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin_SHARE</sys_created_by>
         <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>85ff095367321200f5c55bb557415a03</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value>x_loaner_task</value>
-        <variable display_value="">c35ddb660a0a0ba96248a7095d22925c</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
-        <order>20</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>81ff095367321200f5c55bb557415a03</sys_id>
+        <sys_id>01ff095367321200f5c55bb557415a02</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin_SHARE</sys_updated_by>
         <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
         <value/>
-        <variable display_value="">c35e49040a0a0ba96248a709c2b3780b</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
-        <order>40</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>85ff095367321200f5c55bb557415a02</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value>1</value>
-        <variable display_value="">c35e5fc70a0a0ba96248a7091af61d11</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
-        <order>200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>81ff095367321200f5c55bb557415a04</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value/>
-        <variable display_value="">8ec1dbcec0a800662abc511f1daedc1d</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
-        <order>250</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>89ff095367321200f5c55bb557415a02</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value/>
-        <variable display_value="">c35e03850a0a0ba96248a709503bd0c4</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
-        <order>300</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>05ff095367321200f5c55bb557415a03</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value/>
-        <variable display_value="">8ec61405c0a800661755b30be4ff8fcd</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
-        <order>400</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>8dff095367321200f5c55bb557415a02</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
-        <variable display_value="">8ec7a5dbc0a80066187fa7acf3778705</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
-        <order>600</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>09ff095367321200f5c55bb557415a01</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value/>
-        <variable display_value="">8ecbeba5c0a8006672d676cd11dfa881</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
-        <order>610</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>01ff095367321200f5c55bb557415a04</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value/>
-        <variable display_value="">8ecf789cc0a8006652fc30aae937c5aa</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
-        <order>620</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>09ff095367321200f5c55bb557415a03</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
-        <variable display_value="">8eda2a35c0a800660f7aef7be752bf0b</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
-        <order>700</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>05ff095367321200f5c55bb557415a02</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value/>
-        <variable display_value="">8ed08869c0a800662aafc17e09975bb3</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
-        <order>710</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>8dff095367321200f5c55bb557415a01</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value/>
-        <variable display_value="">8ed4dbbec0a800664dbecf404d2c7ccd</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
-        <order>720</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>05ff095367321200f5c55bb557415a04</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value/>
-        <variable display_value="">8ed32275c0a800665d67078e699a171f</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
-        <order>1000</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>89ff095367321200f5c55bb557415a03</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value>Fields</value>
-        <variable display_value="">c35dfee20a0a0ba96248a709f3a40869</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
-        <order>1100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>0dff095367321200f5c55bb557415a01</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value/>
-        <variable display_value="">c35e07ae0a0a0ba96248a7097c81317c</variable>
+        <variable display_value="Task template">c35e45aa0a0a0ba96248a709f3af7bac</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -774,51 +910,120 @@ answer = 0;</value>
         <sys_updated_by>admin_SHARE</sys_updated_by>
         <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
         <value/>
-        <variable display_value="">c35e0c980a0a0ba96248a70916cbc62e</variable>
+        <variable display_value="Assigned to">c35e0c980a0a0ba96248a70916cbc62e</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
         <document_key>c5ff095367321200f5c55bb557415a01</document_key>
-        <order>1300</order>
+        <order>610</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin_SHARE</sys_created_by>
         <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>81ff095367321200f5c55bb557415a02</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value>Pre-Deployment Prep</value>
-        <variable display_value="">c35e10720a0a0ba96248a709d48d0894</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
-        <order>1400</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>8dff095367321200f5c55bb557415a03</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <value>Ensure the machine is in good working order.&#13;
-Ensure all accessories are accounted for.&#13;
-Load any software requested.</value>
-        <variable display_value="">c35e176c0a0a0ba96248a7090e235011</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
-        <order>1500</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>01ff095367321200f5c55bb557415a02</sys_id>
+        <sys_id>01ff095367321200f5c55bb557415a04</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin_SHARE</sys_updated_by>
         <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
         <value/>
-        <variable display_value="">c35e45aa0a0a0ba96248a709f3af7bac</variable>
+        <variable display_value="Schedule field">8ecf789cc0a8006652fc30aae937c5aa</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>700</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>05ff095367321200f5c55bb557415a02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone based on">8ed08869c0a800662aafc17e09975bb3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>05ff095367321200f5c55bb557415a03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Due date field">8ec61405c0a800661755b30be4ff8fcd</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>720</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>05ff095367321200f5c55bb557415a04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Timezone field">8ed32275c0a800665d67078e699a171f</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>09ff095367321200f5c55bb557415a01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Schedule based on">8ecbeba5c0a8006672d676cd11dfa881</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>2000</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>09ff095367321200f5c55bb557415a02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>// Set 'answer' to the number of seconds this timer should wait&#13;
+answer = 0;</value>
+        <variable display_value="Due date script">8eca692cc0a80066783fefee57143a1a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>620</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>09ff095367321200f5c55bb557415a03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
+        <variable display_value="Schedule">8eda2a35c0a800660f7aef7be752bf0b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>1100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>0dff095367321200f5c55bb557415a01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Fulfillment group">c35e07ae0a0a0ba96248a7097c81317c</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -832,21 +1037,7 @@ Load any software requested.</value>
         <sys_updated_by>admin_SHARE</sys_updated_by>
         <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
         <value/>
-        <variable display_value="">c35dd7a80a0a0ba96248a709f45ae01b</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
-        <order>1700</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>89ff095367321200f5c55bb557415a01</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:47</sys_updated_on>
-        <value>0</value>
-        <variable display_value="">989c45c8c0a8006676efffafaa6d7442</variable>
+        <variable display_value="Set values">c35dd7a80a0a0ba96248a709f45ae01b</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -866,7 +1057,479 @@ Load any software requested.</value>
 //     task.short_description = current.short_description;&#13;
 &#13;
 </value>
-        <variable display_value="">989cdb20c0a800661789b3de0f40214a</variable>
+        <variable display_value="Advanced Script">989cdb20c0a800661789b3de0f40214a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>1300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>81ff095367321200f5c55bb557415a02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>Pre-Deployment Prep</value>
+        <variable display_value="Short description">c35e10720a0a0ba96248a709d48d0894</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>20</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>81ff095367321200f5c55bb557415a03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Priority">c35e49040a0a0ba96248a709c2b3780b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>81ff095367321200f5c55bb557415a04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Due date based on">8ec1dbcec0a800662abc511f1daedc1d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>40</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>85ff095367321200f5c55bb557415a02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Wait for completion">c35e5fc70a0a0ba96248a7091af61d11</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>85ff095367321200f5c55bb557415a03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>x_loaner_task</value>
+        <variable display_value="Task type">c35ddb660a0a0ba96248a7095d22925c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>1700</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>89ff095367321200f5c55bb557415a01</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:47</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Advanced">989c45c8c0a8006676efffafaa6d7442</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>250</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>89ff095367321200f5c55bb557415a02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Duration">c35e03850a0a0ba96248a709503bd0c4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>1000</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>89ff095367321200f5c55bb557415a03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>Fields</value>
+        <variable display_value="Task values from">c35dfee20a0a0ba96248a709f3a40869</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>710</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>8dff095367321200f5c55bb557415a01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone">8ed4dbbec0a800664dbecf404d2c7ccd</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>8dff095367321200f5c55bb557415a02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
+        <variable display_value="Relative duration">8ec7a5dbc0a80066187fa7acf3778705</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>1400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>8dff095367321200f5c55bb557415a03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>Ensure the machine is in good working order.&#13;
+Ensure all accessories are accounted for.&#13;
+Load any software requested.</value>
+        <variable display_value="Instructions">c35e176c0a0a0ba96248a7090e235011</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>85ff095367321200f5c55bb557415a03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>x_loaner_task</value>
+        <variable display_value="Task type">c35ddb660a0a0ba96248a7095d22925c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>20</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>81ff095367321200f5c55bb557415a03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Priority">c35e49040a0a0ba96248a709c2b3780b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>40</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>85ff095367321200f5c55bb557415a02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Wait for completion">c35e5fc70a0a0ba96248a7091af61d11</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>81ff095367321200f5c55bb557415a04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Due date based on">8ec1dbcec0a800662abc511f1daedc1d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>250</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>89ff095367321200f5c55bb557415a02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Duration">c35e03850a0a0ba96248a709503bd0c4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>05ff095367321200f5c55bb557415a03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Due date field">8ec61405c0a800661755b30be4ff8fcd</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>8dff095367321200f5c55bb557415a02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
+        <variable display_value="Relative duration">8ec7a5dbc0a80066187fa7acf3778705</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>09ff095367321200f5c55bb557415a01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Schedule based on">8ecbeba5c0a8006672d676cd11dfa881</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>610</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>01ff095367321200f5c55bb557415a04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Schedule field">8ecf789cc0a8006652fc30aae937c5aa</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>620</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>09ff095367321200f5c55bb557415a03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
+        <variable display_value="Schedule">8eda2a35c0a800660f7aef7be752bf0b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>700</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>05ff095367321200f5c55bb557415a02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone based on">8ed08869c0a800662aafc17e09975bb3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>710</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>8dff095367321200f5c55bb557415a01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone">8ed4dbbec0a800664dbecf404d2c7ccd</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>720</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>05ff095367321200f5c55bb557415a04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Timezone field">8ed32275c0a800665d67078e699a171f</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>1000</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>89ff095367321200f5c55bb557415a03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>Fields</value>
+        <variable display_value="Task values from">c35dfee20a0a0ba96248a709f3a40869</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>1100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>0dff095367321200f5c55bb557415a01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Fulfillment group">c35e07ae0a0a0ba96248a7097c81317c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>01ff095367321200f5c55bb557415a03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Assigned to">c35e0c980a0a0ba96248a70916cbc62e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>1300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>81ff095367321200f5c55bb557415a02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>Pre-Deployment Prep</value>
+        <variable display_value="Short description">c35e10720a0a0ba96248a709d48d0894</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>1400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>8dff095367321200f5c55bb557415a03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>Ensure the machine is in good working order.&#13;
+Ensure all accessories are accounted for.&#13;
+Load any software requested.</value>
+        <variable display_value="Instructions">c35e176c0a0a0ba96248a7090e235011</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>1500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>01ff095367321200f5c55bb557415a02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Task template">c35e45aa0a0a0ba96248a709f3af7bac</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>1600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>0dff095367321200f5c55bb557415a02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value/>
+        <variable display_value="Set values">c35dd7a80a0a0ba96248a709f45ae01b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>1700</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>89ff095367321200f5c55bb557415a01</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:47</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Advanced">989c45c8c0a8006676efffafaa6d7442</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5ff095367321200f5c55bb557415a01</document_key>
+        <order>1710</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>0dff095367321200f5c55bb557415a03</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:47</sys_updated_on>
+        <value>// Set values for the task in this script.  Use the variable 'task' when setting additional values.&#13;
+// Note: This script is run after the task values are set using the Fields, Template or Values you have specified.&#13;
+//&#13;
+// For example:&#13;
+//     task.short_description = current.short_description;&#13;
+&#13;
+</value>
+        <variable display_value="Advanced Script">989cdb20c0a800661789b3de0f40214a</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -881,7 +1544,7 @@ Load any software requested.</value>
         <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
         <value>// Set 'answer' to the number of seconds this timer should wait&#13;
 answer = 0;</value>
-        <variable display_value="">8eca692cc0a80066783fefee57143a1a</variable>
+        <variable display_value="Due date script">8eca692cc0a80066783fefee57143a1a</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="Pre deployment prep">c5ff095367321200f5c55bb557415a01</activity>
@@ -932,6 +1595,7 @@ answer = 0;</value>
         <x>526</x>
         <y>17</y>
     </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=09ff095367321200f5c55bb557415a04"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
         <document_key>09ff095367321200f5c55bb557415a04</document_key>
@@ -944,7 +1608,21 @@ answer = 0;</value>
         <sys_updated_by>admin_SHARE</sys_updated_by>
         <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
         <value>state=16^EQ</value>
-        <variable display_value="">1cb38c8f0a0a0b266fb48e08de35f507</variable>
+        <variable display_value="Set these values">1cb38c8f0a0a0b266fb48e08de35f507</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>09ff095367321200f5c55bb557415a04</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>49ff095367321200f5c55bb557415a04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>state=16^EQ</value>
+        <variable display_value="Set these values">1cb38c8f0a0a0b266fb48e08de35f507</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="Ready for Pickup">09ff095367321200f5c55bb557415a04</activity>
@@ -995,6 +1673,7 @@ answer = 0;</value>
         <x>526</x>
         <y>128</y>
     </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=45ff095367321200f5c55bb557415a08"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
         <document_key>45ff095367321200f5c55bb557415a08</document_key>
@@ -1007,7 +1686,21 @@ answer = 0;</value>
         <sys_updated_by>admin_SHARE</sys_updated_by>
         <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
         <value>state=3^EQ</value>
-        <variable display_value="">1cb38c8f0a0a0b266fb48e08de35f507</variable>
+        <variable display_value="Set these values">1cb38c8f0a0a0b266fb48e08de35f507</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>45ff095367321200f5c55bb557415a08</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>85ff095367321200f5c55bb557415a08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>state=3^EQ</value>
+        <variable display_value="Set these values">1cb38c8f0a0a0b266fb48e08de35f507</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="State = Closed">45ff095367321200f5c55bb557415a08</activity>
@@ -1058,6 +1751,23 @@ answer = 0;</value>
         <x>140</x>
         <y>17</y>
     </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=01ff095367321200f5c55bb557415a01"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>01ff095367321200f5c55bb557415a01</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>41ff095367321200f5c55bb557415a01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
+answer = true;&#13;
+</value>
+        <variable display_value="Condition script">c35debce0a0a0ba96248a709440cf31a</variable>
+    </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
         <document_key>01ff095367321200f5c55bb557415a01</document_key>
@@ -1070,7 +1780,21 @@ answer = 0;</value>
         <sys_updated_by>admin_SHARE</sys_updated_by>
         <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
         <value>state=15^EQ</value>
-        <variable display_value="">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+        <variable display_value="Condition">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>01ff095367321200f5c55bb557415a01</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>c1ff095367321200f5c55bb557415a01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>state=15^EQ</value>
+        <variable display_value="Condition">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -1086,7 +1810,7 @@ answer = 0;</value>
         <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
 answer = true;&#13;
 </value>
-        <variable display_value="">c35debce0a0a0ba96248a709440cf31a</variable>
+        <variable display_value="Condition script">c35debce0a0a0ba96248a709440cf31a</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="State == Deployment Prep">01ff095367321200f5c55bb557415a01</activity>
@@ -1137,6 +1861,7 @@ answer = true;&#13;
         <x>129</x>
         <y>139</y>
     </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=4dff095367321200f5c55bb557415a04"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
         <document_key>4dff095367321200f5c55bb557415a04</document_key>
@@ -1149,7 +1874,7 @@ answer = true;&#13;
         <sys_updated_by>admin_SHARE</sys_updated_by>
         <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
         <value>state=18^EQ</value>
-        <variable display_value="">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+        <variable display_value="Condition">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
@@ -1165,7 +1890,37 @@ answer = true;&#13;
         <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
 answer = true;&#13;
 </value>
-        <variable display_value="">c35debce0a0a0ba96248a709440cf31a</variable>
+        <variable display_value="Condition script">c35debce0a0a0ba96248a709440cf31a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>4dff095367321200f5c55bb557415a04</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>01ff095367321200f5c55bb557415a05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>state=18^EQ</value>
+        <variable display_value="Condition">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>4dff095367321200f5c55bb557415a04</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>8dff095367321200f5c55bb557415a04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
+answer = true;&#13;
+</value>
+        <variable display_value="Condition script">c35debce0a0a0ba96248a709440cf31a</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
         <activity display_value="State == Post Deployment">4dff095367321200f5c55bb557415a04</activity>
@@ -1189,15 +1944,15 @@ answer = true;&#13;
         <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
     </wf_condition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">81ff095367321200f5c55bb557415a05</condition>
-        <from display_value="State == Post Deployment">4dff095367321200f5c55bb557415a04</from>
+        <condition display_value="Always">c1ff095367321200f5c55bb557415a08</condition>
+        <from display_value="Post Deployment">05ff095367321200f5c55bb557415a05</from>
         <sys_created_by>admin_SHARE</sys_created_by>
         <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>d9ff095367321200f5c55bb557415a08</sys_id>
+        <sys_id>11ff095367321200f5c55bb557415a09</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin_SHARE</sys_updated_by>
         <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <to display_value="Post Deployment">05ff095367321200f5c55bb557415a05</to>
+        <to display_value="State = Closed">45ff095367321200f5c55bb557415a08</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
         <condition display_value="Always">0dff095367321200f5c55bb557415a00</condition>
@@ -1209,6 +1964,17 @@ answer = true;&#13;
         <sys_updated_by>admin_SHARE</sys_updated_by>
         <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
         <to display_value="State == Deployment Prep">01ff095367321200f5c55bb557415a01</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">19ff095367321200f5c55bb557415a08</condition>
+        <from display_value="State = Closed">45ff095367321200f5c55bb557415a08</from>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>51ff095367321200f5c55bb557415a09</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <to display_value="End">8dff095367321200f5c55bb557415a00</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
         <condition display_value="Always">45ff095367321200f5c55bb557415a01</condition>
@@ -1233,6 +1999,17 @@ answer = true;&#13;
         <to display_value="Ready for Pickup">09ff095367321200f5c55bb557415a04</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">81ff095367321200f5c55bb557415a05</condition>
+        <from display_value="State == Post Deployment">4dff095367321200f5c55bb557415a04</from>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
+        <sys_id>d9ff095367321200f5c55bb557415a08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
+        <to display_value="Post Deployment">05ff095367321200f5c55bb557415a05</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
         <condition display_value="Always">c9ff095367321200f5c55bb557415a04</condition>
         <from display_value="Ready for Pickup">09ff095367321200f5c55bb557415a04</from>
         <sys_created_by>admin_SHARE</sys_created_by>
@@ -1242,28 +2019,6 @@ answer = true;&#13;
         <sys_updated_by>admin_SHARE</sys_updated_by>
         <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
         <to display_value="State == Post Deployment">4dff095367321200f5c55bb557415a04</to>
-    </wf_transition>
-    <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">c1ff095367321200f5c55bb557415a08</condition>
-        <from display_value="Post Deployment">05ff095367321200f5c55bb557415a05</from>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>11ff095367321200f5c55bb557415a09</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <to display_value="State = Closed">45ff095367321200f5c55bb557415a08</to>
-    </wf_transition>
-    <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">19ff095367321200f5c55bb557415a08</condition>
-        <from display_value="State = Closed">45ff095367321200f5c55bb557415a08</from>
-        <sys_created_by>admin_SHARE</sys_created_by>
-        <sys_created_on>2016-04-20 14:42:38</sys_created_on>
-        <sys_id>51ff095367321200f5c55bb557415a09</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin_SHARE</sys_updated_by>
-        <sys_updated_on>2016-04-20 14:42:38</sys_updated_on>
-        <to display_value="End">8dff095367321200f5c55bb557415a00</to>
     </wf_transition>
     <wf_estimated_runtime_config action="INSERT_OR_UPDATE">
         <estimated_run_time/>
